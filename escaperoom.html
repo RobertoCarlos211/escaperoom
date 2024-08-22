@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room - Estructura de Datos I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            width: 90%;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+        }
+
+        #caja-fuerte {
+            margin-top: 30px;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>¡Bienvenido/a al Escape Room de Estructura de Datos I!</h1>
+        <p>Los y las estudiantes de la asignatura <span class="highlight">Estructura de Datos I</span> han trabajado
+            arduamente para superar este desafío de codificación en Python. A través de varios niveles, han resuelto
+            acertijos, corregido códigos y aplicado conceptos clave de la programación para escapar de un laboratorio
+            virtual.</p>
+
+        <p>Este Escape Room fue diseñado para poner a prueba las habilidades de pensamiento lógico y estructuración de
+            datos de los estudiantes, así como para fomentar el trabajo en equipo y la resolución de problemas en un
+            entorno divertido y educativo.</p>
+
+        <p>Ahora que han completado todos los niveles, han demostrado su capacidad para abordar problemas complejos y
+            encontrar soluciones creativas. ¡Felicitaciones a todos por su esfuerzo y dedicación!</p>
+
+        <p>Para más información sobre el Escape Room o para acceder a los recursos adicionales, haz clic en el siguiente
+            enlace:</p>
+
+        <a href="https://tusalida.com/escape-final" class="btn">Ver Más</a>
+    </div>
+
+    <div id="caja-fuerte">
+        <label for="codigo">Ingresa el código final:</label>
+        <input type="password" id="codigo" name="codigo">
+        <button type="button" onclick="abrirCaja()">Abrir</button>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <script>
+        function abrirCaja() {
+            var codigo = document.getElementById("codigo").value;
+            if (codigo === "impar") { // Reemplaza "impar" con tu clave final
+                document.getElementById("mensaje").innerHTML = "¡La caja fuerte se ha abierto! Has escapado.";
+            } else {
+                document.getElementById("mensaje").innerHTML = "Código incorrecto, intenta de nuevo.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
